@@ -1,0 +1,8 @@
+# Ignore large zip backup files
+mangoanizip.zip
+
+# System/IDE files
+.DS_Store
+Thumbs.db
+.gemini/
+.agents/

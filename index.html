@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAW Alphonso Mango | Premium Animation Experience</title>
+    <meta name="description" content="Experience the rich, raw taste of 100% pure Alphonso mangoes, cold-pressed to perfection. Explore our fully animated interactive journey.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-follower" id="custom-cursor-follower"></div>
+
+    <!-- Preloader -->
+    <div id="loader" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="logo-raw">RAW</span>
+                <span class="logo-anizip">ANIZIP</span>
+            </div>
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <p id="progress-text">0%</p>
+            <p class="loader-subtitle">Loading Interactive Experience...</p>
+        </div>
+    </div>
+
+    <!-- Floating Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-raw">RAW</span>
+                <span class="logo-anizip">ANIZIP</span>
+            </a>
+            <nav class="nav" aria-label="Main Navigation">
+                <a href="#hero-section" class="nav-link">The Story</a>
+                <a href="#process-section" class="nav-link">Our Process</a>
+                <a href="#flavors-section" class="nav-link">Flavors</a>
+                <a href="#order-section" class="nav-link">Order</a>
+                <a href="#faq-section" class="nav-link">FAQs</a>
+            </nav>
+            <a href="#order-section" class="btn btn-nav btn-hover-effect">Order Now</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- 1. Autoplay Hero Section -->
+        <section id="hero-section" class="hero-section">
+            <!-- Background Canvas -->
+            <canvas id="hero-lightpass"></canvas>
+            <div class="canvas-overlay"></div>
+
+            <!-- Narrative Layer (Synchronized Cards) -->
+            <div class="narrative-layer">
+                <div class="narrative-card active" id="card-intro">
+                    <span class="card-tag">Introducing</span>
+                    <h1 class="hero-title">RAW <span class="text-gradient">ALPHONSO</span></h1>
+                    <p class="hero-subtitle">The King of Mangoes, bottled in its purest form. Witness the cinematic raw explosion.</p>
+                </div>
+
+                <div class="narrative-card" id="card-source">
+                    <span class="card-tag">01 / Pure Origin</span>
+                    <h2>Nature's Liquid Gold</h2>
+                    <p>We source only premium, handpicked Alphonso mangoes from the sun-drenched coastal orchards of Ratnagiri. Perfectly sweet, rich, and aromatic.</p>
+                </div>
+
+                <div class="narrative-card" id="card-press">
+                    <span class="card-tag">02 / Cold Pressed</span>
+                    <h2>Pressed at 4°C</h2>
+                    <p>Our state-of-the-art cold press extraction protects natural enzymes, vitamins, and fibers from heat degradation. Taste the raw texture in every sip.</p>
+                </div>
+
+                <div class="narrative-card" id="card-splash">
+                    <span class="card-tag">03 / Pure Explosion</span>
+                    <h2>Flavor Uncompromised</h2>
+                    <p>No added sugar. No dilution with water. No chemical additives. Just pure, creamy mango indulgence captured in a bottle.</p>
+                </div>
+            </div>
+
+            <!-- Interactive Hotspots Layer -->
+            <div class="hotspot-layer" id="hotspot-layer">
+                <!-- Hotspot 1 (Cap) -->
+                <div class="hotspot" id="hotspot-cap" style="top: 28%; left: 50%;">
+                    <button class="hotspot-btn" aria-label="Learn about the Cap" aria-expanded="false"></button>
+                    <div class="hotspot-card">
+                        <h3>Eco-Friendly Cap</h3>
+                        <p>Recyclable cap designed to seal in absolute freshness under extreme pressure.</p>
+                    </div>
+                </div>
+
+                <!-- Hotspot 2 (Label) -->
+                <div class="hotspot" id="hotspot-label" style="top: 50%; left: 50%;">
+                    <button class="hotspot-btn" aria-label="Learn about the Ingredients" aria-expanded="false"></button>
+                    <div class="hotspot-card">
+                        <h3>100% Raw Ingredients</h3>
+                        <p>Only Alphonso Mango pulp. Free from concentrates, coloring, and artificial sweeteners.</p>
+                    </div>
+                </div>
+
+                <!-- Hotspot 3 (Base) -->
+                <div class="hotspot" id="hotspot-base" style="top: 72%; left: 50%;">
+                    <button class="hotspot-btn" aria-label="Learn about the Pressure" aria-expanded="false"></button>
+                    <div class="hotspot-card">
+                        <h3>HPP Protective Bottle</h3>
+                        <p>Heavy-duty, BPA-free material crafted to withstand 6,000 bars of cold water pressure during sterilization.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standalone Scroll indicator -->
+            <div class="scroll-indicator" id="hero-scroll-indicator">
+                <span class="mouse-icon"><span class="wheel"></span></span>
+                <span>Scroll to Explore</span>
+            </div>
+        </section>
+
+        <!-- 2. The Process Section -->
+        <section id="process-section" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Method</span>
+                    <h2 class="section-title">Tree to Bottle in <span class="text-gradient">24 Hours</span></h2>
+                    <p class="section-subtitle">How we preserve the fresh, raw character of Alphonso mangoes without losing heat-sensitive nutrients.</p>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-tabs">
+                        <button class="process-tab-btn active" data-target="tab-orchard" id="tab-btn-orchard">
+                            <span class="tab-num">01</span> The Orchards
+                        </button>
+                        <button class="process-tab-btn" data-target="tab-press" id="tab-btn-press">
+                            <span class="tab-num">02</span> Cold Pressed
+                        </button>
+                        <button class="process-tab-btn" data-target="tab-safety" id="tab-btn-safety">
+                            <span class="tab-num">03</span> HPP Technology
+                        </button>
+                        <button class="process-tab-btn" data-target="tab-fresh" id="tab-btn-fresh">
+                            <span class="tab-num">04</span> Cold Chain Delivery
+                        </button>
+                    </div>
+
+                    <div class="process-content-container">
+                        <div class="process-tab-content active" id="tab-orchard">
+                            <div class="tab-info">
+                                <h3>Handpicked at Peak Ripeness</h3>
+                                <p>Our partners harvest each mango by hand. Only mangoes that have achieved perfect skin color and aroma are selected, ensuring the ultimate brix level (sweetness) for our juice.</p>
+                                <ul class="tab-list">
+                                    <li>Sourced directly from Ratnagiri, India</li>
+                                    <li>Naturally ripened without chemicals</li>
+                                    <li>Rigorous quality inspection on harvest</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="process-tab-content" id="tab-press">
+                            <div class="tab-info">
+                                <h3>Cold Pressing at 4°C</h3>
+                                <p>Pasteurization destroys flavor and essential nutrients. We extract the juice using cold-press technology, applying gentle pressure at low temperatures to retain fiber and nutrients.</p>
+                                <ul class="tab-list">
+                                    <li>No heat generated during extraction</li>
+                                    <li>Retains active Vitamin C and antioxidants</li>
+                                    <li>Thick, velvety, full-bodied texture</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="process-tab-content" id="tab-safety">
+                            <div class="tab-info">
+                                <h3>High-Pressure Processing (HPP)</h3>
+                                <p>Instead of boiling the juice to kill bacteria, we subject the bottled juice to 6,000 atmospheres of cold water pressure. This eliminates pathogens while keeping the taste and nutrition 100% raw.</p>
+                                <ul class="tab-list">
+                                    <li>No preservatives needed</li>
+                                    <li>Extends shelf life up to 45 days</li>
+                                    <li>Retains pure fresh flavor and aroma</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="process-tab-content" id="tab-fresh">
+                            <div class="tab-info">
+                                <h3>Guaranteed Cold Chain</h3>
+                                <p>From our HPP chamber to your refrigerator, the temperature is strictly maintained between 2°C and 4°C. This ensures the raw enzymes remain active and the taste stays orchard-fresh.</p>
+                                <ul class="tab-list">
+                                    <li>Ships in insulated, chilled containers</li>
+                                    <li>Real-time temperature tracking</li>
+                                    <li>Next-day express delivery</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Flavor Showcase Section -->
+        <section id="flavors-section" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">The Collection</span>
+                    <h2 class="section-title">Explore the <span class="text-gradient">Varieties</span></h2>
+                    <p class="section-subtitle">Discover our custom blends crafted to elevate the mango experience with bold flavor highlights.</p>
+                </div>
+
+                <div class="flavors-grid">
+                    <!-- Flavor 1: Alphonso -->
+                    <div class="flavor-card active" data-flavor="alphonso" style="--accent-color: #ff9f1c;">
+                        <div class="flavor-img-wrapper">
+                            <img src="assets/images/ezgif-frame-200.jpg" alt="RAW Alphonso Mango Juice Bottle" class="flavor-img">
+                        </div>
+                        <div class="flavor-info">
+                            <span class="flavor-badge">Best Seller</span>
+                            <h3>Alphonso Original</h3>
+                            <p>Pure, luxurious, single-origin Alphonso mango nectar. Velvet texture with unmatched natural sweetness.</p>
+                            <div class="flavor-meta">
+                                <span>100% Alphonso Mango</span>
+                                <span>No Added Sugar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flavor 2: Spicy Chili -->
+                    <div class="flavor-card" data-flavor="chili" style="--accent-color: #e63946;">
+                        <div class="flavor-img-wrapper">
+                            <img src="assets/images/flavor_chili.jpg" alt="RAW Spicy Mango Chili Juice Bottle" class="flavor-img">
+                        </div>
+                        <div class="flavor-info">
+                            <span class="flavor-badge">Bold Twist</span>
+                            <h3>Spicy Mango Chili</h3>
+                            <p>Sweet Alphonso juice infused with a subtle kick of organic red chili flakes. Warm finish, refreshing start.</p>
+                            <div class="flavor-meta">
+                                <span>Alphonso + Red Chili</span>
+                                <span>Antioxidant Boost</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flavor 3: Coconut Cream -->
+                    <div class="flavor-card" data-flavor="coconut" style="--accent-color: #f1faee;">
+                        <div class="flavor-img-wrapper">
+                            <img src="assets/images/flavor_coconut.jpg" alt="RAW Mango Coconut Cream Juice Bottle" class="flavor-img">
+                        </div>
+                        <div class="flavor-info">
+                            <span class="flavor-badge">Tropical Blend</span>
+                            <h3>Mango Coconut Cream</h3>
+                            <p>A silky-smooth blend of Alphonso mango juice and pure cold-pressed coconut milk. Rich, creamy, and tropical.</p>
+                            <div class="flavor-meta">
+                                <span>Alphonso + Coconut Milk</span>
+                                <span>Electrolyte Hydration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Interactive Order Calculator Section -->
+        <section id="order-section" class="section-padding">
+            <div class="container">
+                <div class="order-box glass-card">
+                    <div class="order-content">
+                        <span class="section-tag">Pre-order Now</span>
+                        <h2 class="section-title">Customize Your <span class="text-gradient">Pack</span></h2>
+                        <p class="order-text">Select your favorite flavor, pack size, and schedule delivery. Hand-pressed on demand and shipped chilled.</p>
+
+                        <!-- Flavor Selector -->
+                        <div class="order-selector-group">
+                            <label class="order-label">1. Choose Flavor</label>
+                            <div class="order-flavors-select">
+                                <button class="select-btn active" data-val="alphonso" style="--btn-color: #ff9f1c;">Alphonso Original</button>
+                                <button class="select-btn" data-val="chili" style="--btn-color: #e63946;">Spicy Chili</button>
+                                <button class="select-btn" data-val="coconut" style="--btn-color: #eaeaea;">Coconut Cream</button>
+                            </div>
+                        </div>
+
+                        <!-- Pack Size Selector -->
+                        <div class="order-selector-group">
+                            <label class="order-label">2. Select Pack Size</label>
+                            <div class="order-packs-select">
+                                <button class="pack-btn active" data-pack="6" data-price="36.00" data-discount="0">
+                                    <span class="pack-title">6-Pack Starter</span>
+                                    <span class="pack-subtitle">$6.00 / Bottle</span>
+                                    <span class="pack-cost">$36.00</span>
+                                </button>
+                                <button class="pack-btn" data-pack="12" data-price="65.00" data-discount="10">
+                                    <span class="pack-badge">Save 10%</span>
+                                    <span class="pack-title">12-Pack Taster</span>
+                                    <span class="pack-subtitle">$5.40 / Bottle</span>
+                                    <span class="pack-cost">$65.00</span>
+                                </button>
+                                <button class="pack-btn" data-pack="24" data-price="115.00" data-discount="20">
+                                    <span class="pack-badge">Save 20%</span>
+                                    <span class="pack-title">24-Pack Party</span>
+                                    <span class="pack-subtitle">$4.80 / Bottle</span>
+                                    <span class="pack-cost">$115.00</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Quantity Selector -->
+                        <div class="order-selector-group qty-group">
+                            <label class="order-label" for="qty-input">3. Pack Quantity</label>
+                            <div class="qty-control">
+                                <button class="qty-btn" id="qty-minus" aria-label="Decrease Quantity">-</button>
+                                <input type="number" id="qty-input" class="qty-input" value="1" min="1" max="10" readonly>
+                                <button class="qty-btn" id="qty-plus" aria-label="Increase Quantity">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary Card -->
+                    <div class="order-summary-card">
+                        <div class="summary-header">
+                            <h3>Order Summary</h3>
+                        </div>
+                        <div class="summary-body">
+                            <div class="summary-row">
+                                <span>Selected Flavor:</span>
+                                <strong id="summary-flavor">Alphonso Original</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span>Pack Size:</span>
+                                <strong id="summary-pack">6 Bottles</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span>Base Price:</span>
+                                <strong id="summary-base">$36.00</strong>
+                            </div>
+                            <div class="summary-row" id="discount-row" style="display: none;">
+                                <span>Discount applied:</span>
+                                <strong class="discount-text" id="summary-discount">-$0.00</strong>
+                            </div>
+                            <hr class="summary-divider">
+                            <div class="summary-row total-row">
+                                <span>Estimated Total:</span>
+                                <span class="total-price" id="summary-total">$36.00</span>
+                            </div>
+                            <p class="shipping-note">Free refrigerated shipping included.</p>
+                            <button class="btn btn-primary btn-hover-effect w-100" id="order-submit-btn">Place Pre-Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FAQ Section -->
+        <section id="faq-section" class="section-padding">
+            <div class="container max-width-md">
+                <div class="section-header">
+                    <span class="section-tag">Information</span>
+                    <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+                    <p class="section-subtitle">Got questions? We've got answers. Everything you need to know about our cold-pressed process.</p>
+                </div>
+
+                <div class="faq-accordion">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-1">
+                            <span>What is High-Pressure Processing (HPP)?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-content" id="faq-ans-1" role="region">
+                            <p>High-Pressure Processing (HPP) is a cold pasteurization technique where the bottled juice is placed inside a hyperbaric chamber and subjected to extremely high water pressure (up to 6,000 bars). This inactivates yeast, mold, and bacteria without heat, preserving the raw nutrients, flavor, and color of the fresh fruit.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-2">
+                            <span>Does the juice contain added sugar or preservatives?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-content" id="faq-ans-2" role="region">
+                            <p>Absolutely not! RAW Anizip juices contain 100% fruit. There are zero added sugars, chemical preservatives, colors, artificial flavors, or even added water. It is as pure as eating a fresh Alphonso mango straight from the tree.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-3">
+                            <span>How long does it stay fresh, and how should it be stored?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-content" id="faq-ans-3" role="region">
+                            <p>Because the juice is raw and contains active enzymes, it must be kept refrigerated at all times (between 2°C and 4°C). Under proper refrigeration, unopened bottles stay fresh for up to 45 days. Once opened, keep it refrigerated and consume within 48 hours.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-4">
+                            <span>Where do your mangoes come from?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-content" id="faq-ans-4" role="region">
+                            <p>We source our mangoes directly from cooperative farms in Ratnagiri, Devgad, and the Konkan region of Maharashtra, India. This geographic area is world-famous for producing the highest-quality Alphonso mangoes, known for their distinct golden saffron hue and rich, fiberless pulp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="logo-raw">RAW</span>
+                    <span class="logo-anizip">ANIZIP</span>
+                    <p>Bottling the world's finest fruits in their rawest, purest, and most delicious state. Crafted with precision, driven by motion.</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Subscribe for Fresh Updates</h3>
+                    <p>Get notified about seasonal harvest batches and exclusive flavor drops.</p>
+                    <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed! Welcome to RAW Anizip.'); this.reset();">
+                        <input type="email" placeholder="Your Email Address" required aria-label="Email address for newsletter">
+                        <button type="submit" class="btn btn-primary btn-hover-effect">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 RAW Anizip. All rights reserved. Created with passion for pure taste.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                    <a href="#" aria-label="Twitter" class="social-link">Twitter</a>
+                    <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Libraries via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
