@@ -37,13 +37,3 @@ To run the project locally:
 
 ---
 
-## 🚀 How to Enable the Live Link on GitHub Pages
-
-Since your repository is public, you can publish this live site for free using GitHub Pages:
-
-1. Go to your repository on GitHub: [https://github.com/Aldojason/animated](https://github.com/Aldojason/animated)
-2. Click on the **Settings** tab in the top navigation bar.
-3. In the left sidebar, click on **Pages** (under the "Code and automation" section).
-4. Under **Build and deployment** -> **Branch**, click the dropdown that says `None` and change it to **`main`**.
-5. Keep the folder dropdown as **`/ (root)`** and click **Save**.
-6. Wait 1–2 minutes, and your site will be live at: [https://aldojason.github.io/animated/](https://aldojason.github.io/animated/)
